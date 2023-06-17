@@ -11,7 +11,7 @@ const port = 3000;
 app.use(express.json());
 // app.use('/attachments', express.static('/attachments'));
 const path = require('path')
-app.use('/tmp', express.static(path.join(__dirname, 'tmp')))
+app.use('/attachments', express.static(path.join(__dirname, 'attachments')))
 app.use(userRouter);
 
 // Start the server
