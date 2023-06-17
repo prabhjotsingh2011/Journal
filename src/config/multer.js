@@ -3,7 +3,7 @@ const path = require('path');
 
 // Set up multer storage configuration
 const storage = multer.diskStorage({
-  destination: './attachments',
+  destination: './tmp/',
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
     cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`); // Unique filename for each attachment
