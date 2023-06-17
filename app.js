@@ -13,7 +13,7 @@ app.use('/attachments', express.static(path.join(__dirname, 'attachments')))
 app.use(userRouter);
 
 // Start the server
-app.listen(process.env.PORT || port, () => {
+app.listen(process.env.PORT , () => {
   console.log(`Server is running on port ${port}`);
 });
 

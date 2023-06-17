@@ -21,7 +21,6 @@
     "netlify-lambda": "^2.0.16",
     "nodemailer": "^6.9.3",
     "nodemon": "^2.0.22",
-    "serverless-http": "^3.2.0",
     "webpack": "^5.87.0"
   }
 }
