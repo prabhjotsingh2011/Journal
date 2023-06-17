@@ -5,7 +5,6 @@ const path = require('path');
 const storage = multer.diskStorage({
   destination: './attachments',
   filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
     cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`); // Unique filename for each attachment
   },
 });
@@ -15,7 +14,6 @@ const upload  = multer({
   storage: storage,
   fileFilter: function (req, file, cb) {
     // Validate file types
-    
     const allowedMimeTypes = ['application/pdf', 'image/jpeg', 'image/png', 'video/mp4', 'text/plain'];
 
     if (allowedMimeTypes.includes(file.mimetype)) {

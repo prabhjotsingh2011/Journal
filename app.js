@@ -1,16 +1,14 @@
-
-
 const express = require('express');
 const jwt = require('jsonwebtoken');
-// const serverless =require('serverless-http');
 const userRouter = require("./src/api/users/user.router.js");
+const path = require('path')
 require('./src/config/database.js')
+
+
 const app = express();
 const port = 3000;
 
 app.use(express.json());
-// app.use('/attachments', express.static('/attachments'));
-const path = require('path')
 app.use('/attachments', express.static(path.join(__dirname, 'attachments')))
 app.use(userRouter);
 
@@ -19,6 +17,5 @@ app.listen(process.env.PORT || port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-// module.exports.handler = serverless(app);
 
 

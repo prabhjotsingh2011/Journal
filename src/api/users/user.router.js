@@ -20,7 +20,7 @@ router.post("/update_journal/:id",validateTokenMiddleware, updateJournal)
 router.post("/delete_journal/:id",validateTokenMiddleware, deleteJournal)
 router.post("/get_studnets",validateTokenMiddleware, getStudents)
 
-router.get("/",(req,res)=>res.send("API is working"))
+router.get("/",(req,res)=>res.send("API is up and working..."))
 
 
 module.exports = router;

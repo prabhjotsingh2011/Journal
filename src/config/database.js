@@ -1,4 +1,5 @@
-// const  = require("mysql");
+
+//we can put db info in .env file. But as of now I'm not doing it for the sake of simplicity and convienience to check the code
 const mysql=require('mysql')
 const db = mysql.createConnection({
   host: 'sql12.freesqldatabase.com',
